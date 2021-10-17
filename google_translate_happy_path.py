@@ -41,4 +41,5 @@ for n in language_key:
     )
 
     for translation in response.translations:
-        assert translation.translated_text == expected_translation, "FAIL: While translating to " + str(target_language_code) + ", we found unexpected translation " + str(translation.translated_text) + ",when " + str(expected_translation) + " was expected."
+        assert translation.translated_text == expected_translation, \
+        "FAIL: (" + str(target_language_code) + "), Found: " + str(translation.translated_text) + ", Expected: " + str(expected_translation)
